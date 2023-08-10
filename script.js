@@ -29,6 +29,7 @@ class Calculator {
     this.previousOperand = this.currentOperand;
     this.currentOperand = "";
   }
+
   compute() {
     let computation;
     const prev = parseFloat(this.previousOperand);
@@ -41,10 +42,10 @@ class Calculator {
       case "-":
         computation = prev - current;
         break;
-      case " *":
+      case "*":
         computation = prev * current;
         break;
-      case "/":
+      case "÷":
         computation = prev / current;
         break;
       default:
@@ -54,22 +55,23 @@ class Calculator {
     this.operation = undefined;
     this.previousOperand = "";
   }
+
   getDisplayNumber(number) {
     const stringNumber = number.toString();
-    const intergerDigits = parseFloat(stringNumber.split(".")[0]);
+    const integerDigits = parseFloat(stringNumber.split(".")[0]);
     const decimalDigits = stringNumber.split(".")[1];
-    let intergerDisplay;
-    if (isNaN(intergerDigits)) {
-      intergerDisplay = "";
+    let integerDisplay;
+    if (isNaN(integerDigits)) {
+      integerDisplay = "";
     } else {
-      intergerDisplay = intergerDigits.toLocaleString("en", {
+      integerDisplay = integerDigits.toLocaleString("en", {
         maximumFractionDigits: 0,
       });
     }
     if (decimalDigits != null) {
-      return `${intergerDisplay}.${decimalDigits}`;
+      return `${integerDisplay}.${decimalDigits}`;
     } else {
-      return intergerDisplay;
+      return integerDisplay;
     }
   }
 
@@ -106,7 +108,7 @@ const calculator = new Calculator(
 
 numberButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    calculator.appendNumber(button.innerHTML);
+    calculator.appendNumber(button.innerText);
     calculator.updateDisplay();
   });
 });
