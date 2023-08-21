@@ -1,58 +1,91 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  font-family: Gotham Rounded, sans-serif;
-  font-weight: normal;
-}
 
 body {
   padding: 0;
   margin: 0;
-  background: linear-gradient(to right, #1e2f37, #15f371);
+  background: linear-gradient(to right, #1e2f37, #0c122d);
 }
 
-.calculator-grid {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  min-height: 100vh;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+#h1 {
+  font-size: 35px;
+  color: #d4dce0;
 }
 
-.calculator-grid > button {
+.container {
+  text-align: center;
+  max-width: 100%;
+}
+
+table{
+  margin: auto;
+}
+
+button {
+  width: 147px;
+  height: 64.5px;
+  margin: 3px;
+  border-radius: 5px;
+  border: 1px solid #f1f3f4;
+  background-color: #f1f3f4;
+  font-size: 25px;
   cursor: pointer;
-  font-size: 2rem;
-  border: 1px solid white;
-  outline: none;
-  background-color: rgba(255, 255, 255, .75);
 }
 
-.calculator-grid > button:hover {
-  background-color: rgba(255, 255, 255, .9);
+button:active {
+  border: 2px solid #dce5e9;
 }
 
-.span-two {
-  grid-column: span 2;
+#input {
+  width: 594px;
+  height: 77px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #d4dce0;
+  font-size: 35px;
+  padding: 0px 10px;
+  text-align: right;
 }
 
-.output {
-  grid-column: 1 / -1;
-  background-color: rgba(0, 0, 0, .75);
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  flex-direction: column;
-  padding: 10px;
-  word-wrap: break-word;
-  word-break: break-all;
+.secondarybtn {
+  background-color: #dadce0;
 }
 
-.output .previous-operand {
-  color: rgba(255, 255, 255, .75);
-  font-size: 1.5rem;
-}
-
-.output .current-operand {
+.ansbtn {
+  background-color: #4285f4;
+  font-weight: 700;
   color: white;
-  font-size: 2.5rem;
+}
+
+#backbtn {
+  background-color: #dadce0;
+  text-decoration-color: #dadce0;
+}
+
+p {
+  color: #d4dce0;
+  font-size: 15px;
+  font-style: italic;
+}
+
+@media screen and (max-width: 800px) {
+  button {
+    width: 15vw;
+    font-size: 4vw;
+  }
+
+  #input {
+    font-size: 12vw;
+    width: 62vw;
+  }
+
+  #h1 {
+    font-size: 6vw;
+  }
+
+  div #footer {
+    font-size: 2vw;
+  }
+
+  div #footer {
+    margin-top: 50px;
+  }
 }
