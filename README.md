@@ -2,7 +2,6 @@
 Calculator
 
 ## Feature
-
 1. Output Screen: The output screen is where all text will be displayed. User inputs are typed and results are calculated based on that input. Again, we can consider this in two parts as follows:
 
 2. Question Output: This will be the input given by the user.
