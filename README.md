@@ -9,13 +9,12 @@ Calculator
 2. Question Output: This will be the input given by the user.
    Answer Output: This will be the result calculated from user input.
 3. Operations: This calculator can perform following operations which are listed below:
-
-Addition
-substraction
-Multiplication
-division
-Percentage
-Square root
+   Addition
+   substraction
+   Multiplication
+   division
+   Percentage
+   Square root
 
 ## Installation
 
@@ -30,8 +29,3 @@ Square root
 3. Make your changes and commit them: `git commit -m 'Add your feature'`
 4. Push to the branch: `git push origin feature/your-feature`
    Submit a pull request.
-
-## cloning
-
-1. copy the ssh link of the project
-2. Go to you terminal and run git clone "link"
